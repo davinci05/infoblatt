@@ -3,9 +3,9 @@ export const exampleUser = {
   email: "leo@vinci.com",
   password: "p",
   name: "Leonardo da Vinci",
-  street: "Musterstraße 12",
-  postalCode: "68159",
-  city: "Mannheim",
+  street: "Altschauerberg 8",
+  postalCode: "91448",
+  city: "Emskirchen",
 };
 
 export const exampleArticles = [
