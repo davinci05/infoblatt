@@ -28,7 +28,7 @@ export const exampleArticles = [
     category: "Menschenrechte",
     tags: ["Zukunft", "Bin auf Klo, ich darf das", "Arbeitsrecht"],
     filesize: "4.7 MB",
-    downloadlink: "/downloads/arbeitszeitbetrug.pdf",
+    downloadlink: "downloads/arbeitszeitbetrug.pdf",
     downloadfilename: "arbeitszeitbetrug.pdf",
   },
   {
@@ -44,7 +44,7 @@ export const exampleArticles = [
       "Moritz K.",
     ],
     filesize: "350 KB",
-    downloadlink: "/downloads/osamabinbaden.pdf",
+    downloadlink: "downloads/osamabinbaden.pdf",
     downloadfilename: "osamabinbaden.pdf",
   },
   {
@@ -55,7 +55,7 @@ export const exampleArticles = [
     category: "Jugendkultur",
     tags: ["Goonen", "Grundwissen"],
     filesize: "2.1 MB",
-    downloadlink: "/downloads/goonen.pdf",
+    downloadlink: "downloads/goonen.pdf",
     downloadfilename: "goonen.pdf",
   },
   {
@@ -66,7 +66,7 @@ export const exampleArticles = [
     category: "Genitaltrauma",
     tags: ["Moritz K.", "Insulin", "Analyse"],
     filesize: "900 KB",
-    downloadlink: "/downloads/ineedhero.pdf",
+    downloadlink: "downloads/ineedhero.pdf",
     downloadfilename: "ineedhero.pdf",
   },
   {
@@ -77,7 +77,7 @@ export const exampleArticles = [
     category: "Timon kauft Insulin bei Moritz und ich habe gefilmt",
     tags: ["Business", "Moritz K.", "Insulin", "Timon"],
     filesize: "6.2 MB",
-    downloadlink: "/downloads/insulin.pdf",
+    downloadlink: "downloads/insulin.pdf",
     downloadfilename: "insulin.pdf",
   },
   {
@@ -88,7 +88,7 @@ export const exampleArticles = [
     category: "Praxis",
     tags: ["Zahlen", "Mathematische Konzepte"],
     filesize: "1.8 MB",
-    downloadlink: "/downloads/69.pdf",
+    downloadlink: "downloads/69.pdf",
     downloadfilename: "69meme.pdf",
   },
   
@@ -100,7 +100,7 @@ export const exampleArticles = [
     category: "Backwarenproduktion",
     tags: ["Huthi-Angriffe", "Jemen", "Croissants", "Moritz K."],
     filesize: "5.8 MB",
-    downloadlink: "/downloads/nussnougat.pdf",
+    downloadlink: "downloads/nussnougat.pdf",
     downloadfilename: "nussnougat.pdf",
   },
   {
@@ -111,7 +111,7 @@ export const exampleArticles = [
     category: "Technik",
     tags: ["Freizeit", "Staubsaugermechanik", "Haushaltsgeräte"],
     filesize: "750 KB",
-    downloadlink: "/downloads/teilamputation.pdf",
+    downloadlink: "downloads/teilamputation.pdf",
     downloadfilename: "teilamputation.pdf",
   },
   {
@@ -122,7 +122,7 @@ export const exampleArticles = [
     category: "Analyse",
     tags: ["Zahlen", "Mathematische Konzepte"],
     filesize: "3.4 MB",
-    downloadlink: "/downloads/67.pdf",
+    downloadlink: "downloads/67.pdf",
     downloadfilename: "67meme.pdf",
   },
 ];
