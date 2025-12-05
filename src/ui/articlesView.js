@@ -38,8 +38,7 @@ export function initArticlesView({ articles }) {
   function setMode(newMode) {
     renderMode = newMode;
 
-    orderStateButton.dataset.active =
-      newMode === "order" ? "true" : "false";
+    orderStateButton.dataset.active = newMode === "order" ? "true" : "false";
     downloadStateButton.dataset.active =
       newMode === "downloads" ? "true" : "false";
 
@@ -65,22 +64,16 @@ export function initArticlesView({ articles }) {
     const query = searchInput.value.toLowerCase().trim();
 
     const filtered = articlesData.filter((article) => {
-      const inName = article.name
-        ?.toLowerCase()
-        .includes(query);
+      const inName = article.name?.toLowerCase().includes(query);
 
-      const inDescription = article.description
-        ?.toLowerCase()
-        .includes(query);
+      const inDescription = article.description?.toLowerCase().includes(query);
 
       const inCategory = article.category
         ? article.category.toLowerCase().includes(query)
         : false;
 
       const inTags = Array.isArray(article.tags)
-        ? article.tags.some((tag) =>
-            String(tag).toLowerCase().includes(query)
-          )
+        ? article.tags.some((tag) => String(tag).toLowerCase().includes(query))
         : false;
 
       return inName || inDescription || inCategory || inTags;
@@ -100,18 +93,14 @@ export function initArticlesView({ articles }) {
 
 function updateOrderButtonUi() {
   if (!orderModalButton) return;
-  const labelSpan = orderModalButton.querySelector(
-    "[data-order-button-label]"
-  );
+  const labelSpan = orderModalButton.querySelector("[data-order-button-label]");
   const totalItems = getTotalItems();
 
   orderModalButton.disabled = totalItems === 0;
 
   if (labelSpan) {
     labelSpan.textContent =
-      totalItems > 0
-        ? `Bestellen (${totalItems})`
-        : "Bestellen";
+      totalItems > 0 ? `Bestellen (${totalItems})` : "Bestellen";
   }
 }
 
@@ -141,8 +130,7 @@ export function renderArticles(list) {
     // 🆕 Metadaten: Kategorie & Dateigröße
     if (article.category || article.filesize) {
       const metaRow = document.createElement("div");
-      metaRow.className =
-        "mt-1 flex flex-wrap items-center gap-2 text-[11px]";
+      metaRow.className = "mt-1 flex flex-wrap items-center gap-2 text-[11px]";
 
       if (article.category) {
         const categoryBadge = document.createElement("span");
@@ -165,8 +153,7 @@ export function renderArticles(list) {
     // 🆕 Tags
     if (Array.isArray(article.tags) && article.tags.length > 0) {
       const tagsRow = document.createElement("div");
-      tagsRow.className =
-        "mt-1 flex flex-wrap gap-1";
+      tagsRow.className = "mt-1 flex flex-wrap gap-1";
 
       article.tags.forEach((tag) => {
         const tagBadge = document.createElement("span");
@@ -179,9 +166,7 @@ export function renderArticles(list) {
       articleElement.appendChild(tagsRow);
     }
 
-    const cartItem = cartItems.find(
-      (item) => item.id === article.id
-    );
+    const cartItem = cartItems.find((item) => item.id === article.id);
     const quantity = cartItem ? cartItem.quantity : 0;
 
     if (renderMode === "downloads") {
@@ -189,8 +174,10 @@ export function renderArticles(list) {
       actions.className = "mt-3 flex justify-end";
 
       const downloadLink = document.createElement("a");
-      downloadLink.href = article.downloadlink;
-    //   downloadLink.download = article.downloadfilename;
+      const base = window.location.pathname.split("/")[1];
+
+      downloadLink.href = `/${base}/${article.downloadlink}`;
+      //   downloadLink.download = article.downloadfilename;
       downloadLink.target = "_blank";
       downloadLink.className =
         "inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50";
@@ -207,12 +194,10 @@ export function renderArticles(list) {
       quantityInfo.textContent = `Im Warenkorb: ${quantity}`;
 
       const actions = document.createElement("div");
-      actions.className =
-        "mt-2 flex items-center justify-between gap-2";
+      actions.className = "mt-2 flex items-center justify-between gap-2";
 
       const buttons = document.createElement("div");
-      buttons.className =
-        "flex items-center gap-2";
+      buttons.className = "flex items-center gap-2";
 
       const removeButton = document.createElement("button");
       removeButton.type = "button";
