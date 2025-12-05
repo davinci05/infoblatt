@@ -1,6 +1,6 @@
 // src/ui/loginForm.js
 import { user } from "../state/userState.js";
-import { exampleUser } from "../data/exampleData.js";
+import { exampleUsers } from "../data/exampleData.js";
 import { showToast } from "./toast.js";
 
 function updateHeaderForLoggedInState() {
@@ -77,8 +77,12 @@ export function initLoginForm({ onLoginSuccess } = {}) {
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
-    if (email === exampleUser.email && password === exampleUser.password) {
-      user.login(exampleUser);
+    const matchedUser = exampleUsers.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (matchedUser) {
+      user.login(matchedUser);
       updateHeaderForLoggedInState();
       loginModal.style.display = "none";
 

@@ -1,5 +1,5 @@
 // src/data/exampleData.js
-export const exampleUser = {
+export const exampleUser1 = {
   email: "leo@vinci.com",
   password: "p",
   name: "Leonardo da Vinci",
@@ -7,6 +7,17 @@ export const exampleUser = {
   postalCode: "91448",
   city: "Emskirchen",
 };
+
+export const exampleUser2 = {
+  email: "test@aidshilfe.test",
+  password: "aids",
+  name: "kundemitaids",
+  street: "aidsstraße 1",
+  postalCode: "12345",
+  city: "stadtmitaidseffekt",
+};
+
+export const exampleUsers = [exampleUser1, exampleUser2];
 
 export const exampleArticles = [
   {
