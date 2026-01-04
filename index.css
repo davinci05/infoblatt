@@ -14,13 +14,18 @@
     z-index: 40;
     inset: 0;
     background-color: rgba(15, 23, 42, 0.5);
-    /* slate-900/70 */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
 }
 
 .modal-content {
-    margin: 3rem auto;
+    margin: 0;
+    width: 100%;
     max-width: 32rem;
 }
+
 
 .progressbar {
     display: flex;
@@ -41,7 +46,6 @@
     width: 120px;
     height: 1px;
     background: #cbd5e1;
-    /* slate-300 */
     margin: 0 0.75rem;
     vertical-align: middle;
 }
@@ -49,11 +53,9 @@
 .progressbar li.active {
     font-weight: 600;
     color: #1e40af;
-    /* blue-800 */
 }
 
 .form-field-error {
     font-size: 0.875rem;
     color: #dc2626;
-    /* red-600 */
 }

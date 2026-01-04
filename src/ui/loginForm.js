@@ -1,4 +1,3 @@
-// src/ui/loginForm.js
 import { user } from "../state/userState.js";
 import { exampleUsers } from "../data/exampleData.js";
 import { showToast } from "./toast.js";
@@ -100,6 +99,6 @@ export function initLoginForm({ onLoginSuccess } = {}) {
     }
   });
 
-  // Initialer UI-Zustand (falls später mal ein Auto-Login kommt)
+  // init ui status
   updateHeaderForLoggedInState();
 }

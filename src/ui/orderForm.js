@@ -1,4 +1,3 @@
-// src/ui/orderForm.js
 import {
   isCartEmpty,
   addCartItem,
@@ -99,7 +98,6 @@ export function initOrderForm() {
     if (orderError) orderError.textContent = "";
   }
 
-  // Verbesserte Regex für DE-Adresse
   function validateAddressStep() {
     clearAllErrors();
 
@@ -368,7 +366,6 @@ export function initOrderForm() {
       return;
     }
 
-    // Hier wäre der API-Call
     clearCart();
     updateCartDisplay();
     updateOrderButtonState();
@@ -377,12 +374,11 @@ export function initOrderForm() {
     orderModal.style.display = "none";
   });
 
-  // Auf globale Cart-Events reagieren (wenn z. B. aus Artikelliste geändert)
   window.addEventListener("cart:changed", () => {
     updateOrderButtonState();
   });
 
-  // Initialzustand
+  // init
   updateFormSteps();
   updateProgressbar();
   updateOrderButtonState();

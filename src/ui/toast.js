@@ -1,11 +1,9 @@
-// src/ui/toast.js
 let toastTimeoutId;
 
 export function showToast(message, type = "info") {
   const container = document.getElementById("toast-container");
   if (!container) return;
 
-  // Reset Inhalt & Klassen
   container.innerHTML = "";
 
   const toast = document.createElement("div");
@@ -34,7 +32,6 @@ export function showToast(message, type = "info") {
   toast.append(icon, text);
   container.appendChild(toast);
 
-  // Auto-hide
   clearTimeout(toastTimeoutId);
   toastTimeoutId = setTimeout(() => {
     toast.classList.add("opacity-0");

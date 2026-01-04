@@ -1,4 +1,3 @@
-// src/state/userState.js
 export const user = {
   isLoggedIn: false,
   data: null,

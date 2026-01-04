@@ -1,4 +1,3 @@
-// src/ui/articlesView.js
 import {
   addCartItem,
   decrementCartItem,
@@ -59,7 +58,6 @@ export function initArticlesView({ articles }) {
     setMode("downloads");
   });
 
-  // 🔍 Suche jetzt auch in category und tags
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase().trim();
 
@@ -127,7 +125,6 @@ export function renderArticles(list) {
 
     articleElement.append(title, description);
 
-    // 🆕 Metadaten: Kategorie & Dateigröße
     if (article.category || article.filesize) {
       const metaRow = document.createElement("div");
       metaRow.className = "mt-1 flex flex-wrap items-center gap-2 text-[11px]";
@@ -150,7 +147,6 @@ export function renderArticles(list) {
       articleElement.appendChild(metaRow);
     }
 
-    // 🆕 Tags
     if (Array.isArray(article.tags) && article.tags.length > 0) {
       const tagsRow = document.createElement("div");
       tagsRow.className = "mt-1 flex flex-wrap gap-1";

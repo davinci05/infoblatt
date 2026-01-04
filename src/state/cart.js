@@ -1,4 +1,3 @@
-// src/state/cart.js
 export const cart = {
   items: [],
 };

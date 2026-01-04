@@ -1,4 +1,3 @@
-// src/main.js
 import { exampleArticles } from "./data/exampleData.js";
 import { initArticlesView } from "./ui/articlesView.js";
 import { initLoginForm } from "./ui/loginForm.js";
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initOrderForm();
   initLoginForm({
     onLoginSuccess(userData) {
-      // Falls du später noch was Spezielles tun willst
       console.log("Angemeldet als", userData.name);
     },
   });

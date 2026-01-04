@@ -1,23 +1,27 @@
-# 🚨 Warum Alkohol rektal einzuführen extrem gefährlich ist
-1. Keine Schutzfunktion wie beim Trinken
+# Classic Cars – Kataloge bestellen & herunterladen
 
-Beim normalen Trinken begrenzt der Magen die Aufnahme und kann bei Überdosierung reagieren (z. B. Erbrechen).
-Rektal gibt es diese Schutzfunktion nicht – der Körper nimmt den Alkohol unvermittelt und viel schneller auf.
+Kleine Web-App zur Anzeige von „Classic Cars“-Artikeln (Kataloge/Prospekte) mit Suchfunktion, Warenkorb/Bestellung sowie Download-Ansicht. Zusätzlich sind rechtliche Seiten (Datenschutz/AGB/Impressum) verlinkt.
 
-2. Hohe Gefahr einer Alkoholvergiftung
+## Funktionen
+- Artikelübersicht als Karten/Grid
+- Suche nach Artikeln
+- Zwei Ansichten: **Bestellen** und **Herunterladen**
+- Bestell-Modal mit 2 Schritten:
+  1) Adresseingabe  
+  2) Bestätigung inkl. AGB-Checkbox
+- Login-Modal (Demo)
+- Footer mit Links zu Impressum, Datenschutz und AGB
 
-Medizinische Fallberichte zeigen, dass Alkohol rektal zu plötzlichen, lebensbedrohlichen Blutalkoholwerten führt.
-Schon geringe Mengen können zu:
-- Bewusstlosigkeit
-- Atemdepression
-- Herzstillstand führen.
+## Demo-Login
+Die Zugangsdaten sind in der Oberfläche als Demo angegeben:
+- E-Mail: `feser@gso.test`
+- Passwort: `1234`
 
-3. Schwere Schleimhautschäden
-Rektale Schleimhaut ist empfindlich. Alkohol in hoher Konzentration kann:
-- chemische Verätzungen
-- Blutungen
-- Infektionen verursachen.
-
-4. Kein Gefühl für die Dosis
-
-Da man keinen Geschmack oder Rauschverlauf wie beim Trinken hat, wird die Menge schnell unterschätzt.
+## Projektstruktu
+- `index.html` – Startseite
+- `index.css` – zusätzliche Styles
+- `src/main.js` – Logik (Rendern der Artikel, Suche, Warenkorb, Login/Modals)
+- `legal/privacy.html` – Datenschutzseite
+- `legal/terms.html` – AGB 
+- `legal/imprint.html` – Impressum
+- `downloads/` – Ablage für PDF-Dateien (Download-Links verweisen i. d. R. hierhin)
